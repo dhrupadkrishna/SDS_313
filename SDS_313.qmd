@@ -1,0 +1,22 @@
+---
+title: "SDS_313"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+penguins |>
+  ggplot(mapping=aes(x=species, y=body_mass_g,
+         fill=species))+
+  geom_boxplot()+
+  labs(title = "Penguin Body Mass by Species", x=
+         "Species",
+       y="Body Mass (g)")
+```
